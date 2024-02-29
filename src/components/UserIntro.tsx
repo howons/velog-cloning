@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import styles from './UserIntro.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import { user } from '../contexts/types';
 
 const cx = classNames.bind(styles);

@@ -455,7 +455,7 @@ function Write() {
     try {
       const response = await axios.post(
         `/api/v1/velog/image_upload/1`,
-        imageData,
+        'imageData',
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
       setImageLink(response.data.image);

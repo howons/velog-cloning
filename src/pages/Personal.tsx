@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import axios from 'axios';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import { debounce } from 'lodash';
 import BigPostComp from '../components/BigPostComp';
-// eslint-disable-next-line import/extensions,import/no-unresolved
+
 import styles from './Personal.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved,camelcase
+
 import { post } from '../contexts/types';
 
 const cx = classNames.bind(styles);
@@ -140,6 +140,7 @@ function Personal() {
                           'tagElem',
                           tagQuery === tag.tag_name ? 'tagActive' : 'none'
                         )}
+                        key={tag.id}
                       >
                         <Link to={`/${id}?tag=${tag.tag_name}`}>
                           {tag.tag_name}

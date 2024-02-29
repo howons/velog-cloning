@@ -30,6 +30,7 @@ function Comment({
   const offset = (page - 1) * commentPerPage;
 
   useEffect(() => {
+    console.log('commentList', commentList);
     setCurComments(
       commentList.filter(comment => comment.parent_comment === parent)
     );

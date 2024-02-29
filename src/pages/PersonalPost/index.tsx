@@ -190,7 +190,9 @@ function PersonalPost() {
     if (!isLoad) return;
 
     try {
-      const response = await axios.get(`/api/v1/accounts/user/@${post.author}`);
+      const response = await axios.get(
+        `/api/v1/accounts/user/@${post.author || 'a'}`
+      );
       const userInfo: user = response.data;
       setAuthorInfo({ ...userInfo });
 
@@ -298,7 +300,7 @@ function PersonalPost() {
         is_private: post.is_private,
       };
       const response = await axios.post(
-        `/api/v1/velog/@${post.author}/${post.url}/`,
+        `/api/v1/velog/@${post.author || 'a'}/${post.url || 'a'}/`,
         postParams
       );
       setPost({
@@ -404,7 +406,7 @@ function PersonalPost() {
                 src={
                   authorInfo.profile_image &&
                   authorInfo.profile_image[0] === '/'
-                    ? `https://api.7elog.store${authorInfo.profile_image}`
+                    ? `${authorInfo.profile_image}`
                     : authorInfo.profile_image
                 }
                 alt="profile"

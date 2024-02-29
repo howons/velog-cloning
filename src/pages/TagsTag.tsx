@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import styles from './TagsTag.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import Header from '../components/Header';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import ScrollBigPosts from '../components/ScrollBigPosts';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { post } from '../contexts/types';
 
 const cx = classNames.bind(styles);

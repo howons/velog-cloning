@@ -28,9 +28,22 @@ function Home() {
         const url =
           pageNumber === 1
             ? `/api/v1/velog/${dateFilter}`
-            : `/api/v1/velog/${dateFilter}/?page=${pageNumber}`;
+            : `/api/v1/velog/${dateFilter}?page=${pageNumber}`;
         const response = await axios.get(url);
-        setPosts(posts => posts.concat(response.data.results));
+        setPosts(posts =>
+          response.data.results.reduce(
+            (acc: post[], cur: post) => {
+              if (
+                acc.some(post => {
+                  return post.pid === cur.pid;
+                })
+              )
+                return acc;
+              return [...acc, cur];
+            },
+            [...posts]
+          )
+        );
         pageNumber += 1;
         loading = false;
         observer.observe(entry.target);

@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import styles from './BigPostComp.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { post, user } from '../contexts/types';
 
 const cx = classNames.bind(styles);
@@ -86,7 +83,7 @@ function BigPostComp({ postInfo, username }: post_type) {
       <p>{postInfo.preview}</p>
       <div className={cx('tagWrapper')}>
         {postInfo.tags?.map(tag => (
-          <Link to={`/tags/${tag.name}`} className={cx('tag')}>
+          <Link to={`/tags/${tag.name}`} className={cx('tag')} key={tag.name}>
             {tag.name}
           </Link>
         ))}

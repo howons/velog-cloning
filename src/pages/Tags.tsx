@@ -1,11 +1,8 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import styles from './Tags.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import Header from '../components/Header';
 
 const cx = classNames.bind(styles);
@@ -80,7 +77,7 @@ function Tags() {
             (tagInfo: tagGetType) =>
               tagInfo.tag_name !== '' &&
               tagInfo.postCount !== 0 && (
-                <div className={cx('tagComp')}>
+                <div className={cx('tagComp')} key={tagInfo.tag_name}>
                   <div>
                     <Link
                       to={`/tags/${tagInfo.tag_name}`}

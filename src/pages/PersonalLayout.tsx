@@ -1,14 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import Header from '../components/Header';
 import HeaderMoving from '../components/HeaderMoving';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import UserIntro from '../components/UserIntro';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import styles from './PersonalLayout.module.scss';
 
 const cx = classNames.bind(styles);

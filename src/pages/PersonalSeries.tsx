@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import moment from 'moment';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import styles from './PersonalSeries.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { series } from '../contexts/types';
 import SeriesComp from '../components/SeriesComp';
 

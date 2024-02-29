@@ -1,15 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import Header from '../components/Header';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import UserIntro from '../components/UserIntro';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import styles from './PersonalAbout.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { useLoginValue } from '../contexts/LoginProvider';
 
 const cx = classNames.bind(styles);
@@ -46,9 +41,9 @@ function PersonalAbout() {
     getUser();
   }, [id]);
 
+  const loginValue = useLoginValue();
   const loginUser =
-    useLoginValue().isLogin &&
-    useLoginValue().user?.username === currentUser.username;
+    loginValue.isLogin && loginValue.user?.username === currentUser.username;
   const [isWriting, setWriting] = useState(false);
   function writeOpen() {
     setWriting(true);

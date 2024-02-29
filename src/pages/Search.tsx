@@ -1,15 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { debounce } from 'lodash';
 import axios from 'axios';
 import styles from './Search.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import Header from '../components/Header';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import BigPostComp from '../components/BigPostComp';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { post } from '../contexts/types';
 
 const cx = classNames.bind(styles);

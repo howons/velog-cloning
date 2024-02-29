@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import moment from 'moment/moment';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import classNames from 'classnames/bind';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import axios from 'axios';
 import Header from '../components/Header';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import styles from './PersonalSeriesName.module.scss';
-// eslint-disable-next-line import/extensions,import/no-unresolved
 import { seriesPost } from '../contexts/types';
 import OrderPostComp from '../components/OrderPostComp';
 import { useLoginValue } from '../contexts/LoginProvider';
