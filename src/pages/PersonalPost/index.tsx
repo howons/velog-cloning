@@ -236,7 +236,6 @@ function PersonalPost() {
     .use(rehypeReact, { createElement, Fragment })
     .use(defaultPlugin)
     .processSync(post.content).result;
-  console.log('md', md, post.content);
 
   const mdElements: mdElementType[] = md.props.children
     ? md.props.children
