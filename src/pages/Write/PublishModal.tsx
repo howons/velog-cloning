@@ -298,7 +298,7 @@ export default function PublishModal({
               thumbnailData || postParams,
               postConfig
             );
-
+      console.log('postparams', postParams);
       if (user !== null) navigate(`/@${user.username}/${post.url}`);
     } catch (error) {
       showToast({ type: 'error', message: '다시 시도해주세요.' });

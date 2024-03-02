@@ -219,10 +219,10 @@ function PersonalPost() {
     }
   }, [isLoad]);
 
-  useEffect(() => {
-    getComment();
-    setCommentLoadTrig(false);
-  }, [getComment, commentLoadTrig]);
+  // useEffect(() => {
+  //   getComment();
+  //   setCommentLoadTrig(false);
+  // }, [getComment, commentLoadTrig]);
 
   const defaultPlugin = () => (tree: any) => {
     treeData = tree; // treeData length corresponds to previewer's childNodes length
@@ -236,6 +236,7 @@ function PersonalPost() {
     .use(rehypeReact, { createElement, Fragment })
     .use(defaultPlugin)
     .processSync(post.content).result;
+  console.log('md', md, post.content);
 
   const mdElements: mdElementType[] = md.props.children
     ? md.props.children
